@@ -1,22 +1,22 @@
-    <div id="example" class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <br />
-          <br />
-          <br />
-          <br />
-        <div ng-repeat="question in quiz">
-        <div>
-          <h4>{{question.question}}</h4>
-          <div ng-repeat="response in question.wrongChoices">
-          {{response}}
-          </div>
-          <div>
-          {{question.answer}}
-          </div>
+<div id="example" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <br />
+      <br />
+      <br />
 
+        <div class="quiz-applet">
+          <h4>{{quiz[currentQuestion].question}}</h4>
+          <div ng-repeat="response in quiz[currentQuestion].choices">
+            {{response}}
+          </div>
+          <button ng-disabled="currentQuestion == 0" ng-click="currentQuestion=currentQuestion-1">
+          Previous
+          </button>
+          <button ng-disabled="currentQuestion == quiz.length" ng-click="currentQuestion=currentQuestion+1">
+          Next
+          </button>
         </div>
-        </div>
-      </div>
     </div>
   </div>
+</div>

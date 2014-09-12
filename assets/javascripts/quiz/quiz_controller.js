@@ -13,11 +13,14 @@
 
   function quizController($scope) {
 
+
+
     $scope.quiz = [
       {
         "question" : "The answer to this question is two?",
-        "wrongChoices" : [
+        "choices" : [
           "one",
+          "two",
           "three",
           "four"
         ],
@@ -25,16 +28,18 @@
       },
       {
         "question" : "The answer to this question is three?",
-        "wrongChoices" : [
+        "choices" : [
           "one",
           "two",
+          "three",
           "four"
         ],
         "answer" : "three"
       },
       {
         "question" : "The answer to this question is one?",
-        "wrongChoices" : [
+        "choices" : [
+          "one",
           "two",
           "three",
           "four"
@@ -43,14 +48,17 @@
       },
       {
         "question" : "The answer to this question is four?",
-        "wrongChoices" : [
+        "choices" : [
           "one",
           "two",
-          "three"
+          "three",
+          "four"
         ],
         "answer" : "four"
       }
     ];
+
+    $scope.currentQuestion = 0;
 
   }
 

@@ -8,3 +8,5 @@ Clone repo and run:
 `npm install`
 
 Now run `grunt` and open `index.html`
+
+App is not yet functional
