@@ -1,7 +1,7 @@
 {
-  "name": "AngleSass",
+  "name": "QuizApp",
   "version": "0.0.1",
-  "description": "angular module for snackbar notifications",
+  "description": "angular module for quizzes",
   "main": "",
   "authors": [
     "Nichlos Incardone"
@@ -17,7 +17,7 @@
     "assets",
     ".bowerrc",
     ".gitignore",
-    "demo.html",
+    "index.html",
     "gruntfile.js",
     "package.json",
     "README.md"

@@ -5,11 +5,9 @@
 
   dependencies = [
     'ni.States',
-    'ni.Templates',
-    
-    'ni.Validator'
+    'ni.Templates'
   ];
 
-  angular.module('ni.Main', dependencies);
+  angular.module('ni.QuizApp', dependencies);
 
 })(angular);
