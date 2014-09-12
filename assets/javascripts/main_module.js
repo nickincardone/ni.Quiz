@@ -5,7 +5,8 @@
 
   dependencies = [
     'ni.States',
-    'ni.Templates'
+    'ni.Templates',
+    'ni.Quiz'
   ];
 
   angular.module('ni.QuizApp', dependencies);

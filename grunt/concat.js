@@ -6,8 +6,8 @@ module.exports = {
       }
     },
     src: [
-      '<%= jsPath %>/global/validator_module.js',
-      '<%= jsPath %>/global/*.js',
+      '<%= jsPath %>/quiz/quiz_module.js',
+      '<%= jsPath %>/quiz/*.js',
       '<%= jsPath %>/states/states_module.js',
       '<%= jsPath %>/states/*.js',
       '<%= jsPath %>/templates_module.js',
