@@ -14,7 +14,7 @@
   function quizController($scope) {
 
     $scope.choice = []; 
-
+    $scope.quizDone = false;
     $scope.quiz = [
       {
         "question" : "What is the capital of Maine?",

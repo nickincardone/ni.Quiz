@@ -44,6 +44,7 @@ function gruntConfig(grunt) {
     //'protractor'
   ]);
   grunt.registerTask('default', [
-    'build:dist'
+    'build:dist',
+    'watch'
   ]);
 }

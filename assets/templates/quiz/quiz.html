@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4 col-xs-12">
-      <div class="quiz-applet">
+      <div ng-hide="quizDone" class="quiz-applet">
         <form>
           <h4>{{quiz[currentQuestion].question}}</h4>
           <div class="choices" ng-repeat="response in quiz[currentQuestion].choices">
@@ -17,7 +17,7 @@
               <button ng-disabled="currentQuestion == 0" ng-click="currentQuestion = currentQuestion-1">Previous</button>
             </div>
             <div class="col-xs-4">
-              <button ng-show="currentQuestion == quiz.length-1">Submit</button>
+              <button ng-show="currentQuestion == quiz.length-1" ng-click="quizDone = true">Submit</button>
             </div>
             <div class="col-xs-4">
               <button ng-disabled="currentQuestion == quiz.length-1" ng-click="currentQuestion = currentQuestion+1">
@@ -28,7 +28,18 @@
         </form>
         <p>Current answer: {{choice[currentQuestion]}} </p>
         <p>Answers for entire quiz: {{choice | json}} </p>
-        {{quizDone}}
+      </div>
+      <div ng-show="quizDone">
+        <div ng-repeat="answer in choice track by $index">
+          <p>Question {{$index + 1}}: 
+          <span ng-show="choice[$index] == quiz[$index].answer">correct</span>
+          <span ng-hide="choice[$index] == quiz[$index].answer">incorrect, Correct Answer: {{quiz[$index].answer}}</span>
+          </p>
+
+        </div>
+        <center>
+          <button ng-click="quizDone = false">Retry Quiz</button>
+        </center>
       </div>
     </div>
   </div>
