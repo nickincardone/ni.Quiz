@@ -1,3 +1,55 @@
+$ni-blue: #4B8188;
+$ni-orange: #EC7263;
+$ni-grey: #EEEEEE;
+$ni-light-white: #f8f8f8;
+$white: #ffffff;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+$main-font: 'Open Sans', Arial, Tahoma;
+
 body {
-	background-color: #f0f0f0;
+    background-color: $ni-blue;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 1em;
+    color: #363636;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 920px;
+    }
+}
+
+.content-container {
+    background-color: $white;
+}
+
+.jumbotron {
+    a {
+        font-size: 2em;
+        background-color: #fff;
+        border: 2px #e7e7e7 solid;
+    }
+    text-align: center;
+    border-bottom: 0;
+}
+
+.shot-page {
+    .col-centered {
+        float: none;
+        margin: 0 auto;
+    }
+    select {
+        width: 140px;
+    }
+    svg {
+        border: black 1px solid;
+    }
+}
+
+.quiz-applet {
+	.choices {
+		padding-left: 30px;
+		font-size: 1.75em;
+	}
 }

@@ -13,52 +13,59 @@
 
   function quizController($scope) {
 
-
+    $scope.choice = []; 
 
     $scope.quiz = [
       {
-        "question" : "The answer to this question is two?",
+        "question" : "What is the capital of Maine?",
         "choices" : [
-          "one",
-          "two",
-          "three",
-          "four"
+          "Atlanta",
+          "Frankfort",
+          "Augusta",
+          "Montgomery"
         ],
-        "answer" : "two"
+        "answer" : "Augusta"
       },
       {
-        "question" : "The answer to this question is three?",
+        "question" : "What is the capital of Georgia?",
         "choices" : [
-          "one",
-          "two",
-          "three",
-          "four"
+          "Atlanta",
+          "Frankfort",
+          "Augusta",
+          "Montgomery"
         ],
-        "answer" : "three"
+        "answer" : "Atlanta"
       },
       {
-        "question" : "The answer to this question is one?",
+        "question" : "What is the capital of Kentucky?",
         "choices" : [
-          "one",
-          "two",
-          "three",
-          "four"
+          "Atlanta",
+          "Frankfort",
+          "Augusta",
+          "Montgomery"
         ],
-        "answer" : "one"
+        "answer" : "Frankfort"
       },
       {
-        "question" : "The answer to this question is four?",
+        "question" : "What is the capital of Alabama?",
         "choices" : [
-          "one",
-          "two",
-          "three",
-          "four"
+          "Atlanta",
+          "Frankfort",
+          "Augusta",
+          "Montgomery"
         ],
-        "answer" : "four"
+        "answer" : "Montgomery"
       }
     ];
 
+
+      for (var i = 0; i < $scope.quiz.length; i++) {
+        $scope.choice[i] = null;
+      }
+
+
     $scope.currentQuestion = 0;
+
 
   }
 
