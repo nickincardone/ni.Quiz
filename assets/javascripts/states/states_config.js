@@ -20,7 +20,7 @@
       url: '/',
       views: {
         '': { 
-          templateUrl: 'quiz.html',
+          templateUrl: 'demo.html',
           controller: 'quizController'
         },
         'header': {

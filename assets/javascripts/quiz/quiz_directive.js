@@ -12,16 +12,21 @@
   function niQuiz() {
 
     return {
-      require: 'ngModel',
+      transclude: true,
       scope: {
-        
+        quiz: '=niQuiz'
       },
-      templateUrl: 'niQuiz.html',
-      link: quiz
+      templateUrl: 'quiz.html',
+      link: createQuiz
     };
 
-    function quiz(scope, elm, attrs, ctrl) {
-      console.log("made it");
+    function createQuiz(scope, elm, attrs) {
+      scope.currentQuestion = 0;
+      scope.choice = [];
+      for (var i = 0; i < scope.quiz.length; i++) {
+        scope.choice[i] = null;
+      }
+
 
     }
   }
