@@ -28,7 +28,11 @@
       scope.choice = [];
       for (var i = 0; i < scope.quiz.length; i++) {
         scope.choice[i] = null;
+
+        scope.quiz[i].choices = shuffle(scope.quiz[i].choices);
       }
+
+      scope.random = [];
 
       //tracks if quiz is complete
       scope.quizDone = false;
@@ -41,7 +45,7 @@
           }
         }
         return true;
-      } 
+      }
 
       scope.checkQuiz = function() {
         for (var i = 0; i < scope.choice.length; i++) {
@@ -55,6 +59,7 @@
 
       scope.next = function() {
         scope.currentQuestion++;
+
       }
 
       scope.previous = function() {
@@ -64,6 +69,15 @@
       scope.submitQuiz = function() {
         scope.quizDone = true;
       }
+
+      scope.retryQuiz = function() {
+        scope.quizDone = false;
+      }
+
+      function shuffle(o) { 
+        for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+      };
 
     }
   }
