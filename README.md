@@ -2,6 +2,8 @@
 
 ## Quiz Application Built in Angular.js
 
+[View Demo](http://nickincardone.com/#/quiz)
+
 ### Setup
 
 Clone repo and run:
