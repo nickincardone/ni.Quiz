@@ -6,13 +6,14 @@
     </div>
     <div class="row">
       <div class="col-xs-4">
-        <button ng-disabled="currentQuestion == 0" ng-click="currentQuestion = currentQuestion-1">Previous</button>
+        <button ng-disabled="currentQuestion == 0" ng-click="previous()">Previous</button>
       </div>
       <div class="col-xs-4">
-        <button ng-show="currentQuestion == quiz.length-1" ng-click="quizDone = true">Submit</button>
+        <button ng-show="quizAnswered" ng-click="submitQuiz()">Submit</button>
       </div>
+      {{checkQuiz()}}
       <div class="col-xs-4">
-        <button ng-disabled="currentQuestion == quiz.length-1" ng-click="currentQuestion = currentQuestion+1">
+        <button ng-disabled="currentQuestion == quiz.length-1" ng-click="next()">
         Next
         </button>
       </div>
